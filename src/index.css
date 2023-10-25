@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-size-adjust: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* Media query to enable font size adjustment at a specific breakpoint */
+@media (max-width: 768px) {
+  body {
+    text-size-adjust: none;
+  }
+}

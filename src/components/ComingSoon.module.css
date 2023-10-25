@@ -1,0 +1,207 @@
+:root {
+  --primary-text-color: #0a0a01;
+  --secondary-text-color: #0a0a01;
+  --secondary-color: #466bff;
+}
+
+.topBar {
+  padding: clamp(7px, 1.597vw, 23px) clamp(14px, 5.2vw, 75px);
+}
+
+.topBar h1 {
+  margin: 0;
+  color: var(--secondary-color);
+  font-family: Poppins;
+  font-size: clamp(18px, 2.29vw, 33px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+._flex {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.hero {
+  max-width: 456px;
+  margin-top: 17.96vh;
+  margin-left: 75px;
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(20px, 2.08vw, 30px);
+}
+
+.hero h1 {
+  color: var(--primary-text-color);
+  font-size: clamp(38px, 4.375vw, 63px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+}
+
+.hero p {
+  color: var(--secondary-text-color);
+  font-size: clamp(11px, 1.04vw, 15px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 100%;
+}
+
+.hero_input input {
+  width: clamp(334px, 31.666vw, 456px);
+  padding: clamp(14px, 1.319vw, 19px) clamp(18px, 1.8vw, 26px);
+  border: none;
+  flex-shrink: 0;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 1px 1px 24px 0px rgba(0, 0, 0, 0.1);
+  color: #6b6b6b;
+  font-family: Poppins;
+  font-size: clamp(16px, 1.38vw, 20px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  box-sizing: border-box;
+}
+
+.hero_btn button {
+  width: clamp(334px, 31.666vw, 456px);
+  padding: clamp(10px, 0.97vw, 14px) clamp(106px, 9.65vw, 139px);
+  border: none;
+  flex-shrink: 0;
+  border-radius: clamp(12px, 1.11vw, 16px);
+  background: var(--secondary-color);
+  color: #fff;
+  font-size: clamp(24px, 2.22vw, 32px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.spiral_top {
+  width: 73.728px;
+  height: 70.909px;
+  transform: rotate(9.198deg);
+  flex-shrink: 0;
+  position: absolute;
+  top: 20vh;
+  left: 3vw;
+}
+.spiral_bottom {
+  width: 73.728px;
+  height: 70.909px;
+  transform: rotate(9.198deg);
+  flex-shrink: 0;
+  position: absolute;
+  bottom: clamp(75px, 11vh, 161px);
+  left: 30vw;
+}
+
+.box_img {
+  width: 100%;
+  height: 100%;
+}
+
+.box_img img {
+  width: clamp(265px, 65vw, 936px);
+  height: clamp(336px, 61.18vw, 881px);
+  position: absolute;
+  right: 0;
+  top: -2px;
+  z-index: -1;
+}
+
+.box_img .floatingBox1 {
+  width: clamp(54px, 11.11vw, 160px);
+  height: clamp(73px, 12.15vw, 175px);
+  position: absolute;
+  right: 30vw;
+  top: 15vh;
+  z-index: 10;
+  animation: floatAnimation 4s ease infinite;
+}
+
+.box_img .floatingBox2 {
+  width: clamp(65px, 13.88vw, 200px);
+  height: clamp(83px, 17.569vw, 253px);
+  position: absolute;
+  right: 5vw;
+  top: 15vh;
+  z-index: 10;
+  animation: floatAnimation 4s ease infinite;
+}
+
+.box_img .floatingBox3 {
+  width: clamp(65px, 13.88vw, 200px);
+  height: clamp(83px, 17.569vw, 253px);
+  position: absolute;
+  right: 15vw;
+  top: 38vh;
+  z-index: 10;
+  animation: floatAnimation 4s ease infinite;
+}
+
+@keyframes floatAnimation {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(
+      50px
+    ); /* Adjust this value for the desired floating range */
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .hero h1, .hero p{
+    text-align: center;
+  }
+
+  .box_img img {
+    top: -45px;
+  }
+
+  .box_img .floatingBox1 {
+    right: 42vw;
+    top: 6vh;
+    animation: floatAnimation_mobile 4s ease infinite;
+  }
+
+  .box_img .floatingBox2 {
+    right: 2vw;
+    top: 1.5vh;
+    animation: floatAnimation_mobile 4s ease infinite;
+  }
+
+  .box_img .floatingBox3 {
+    right: 18vw;
+    top: 8vh;
+    animation: floatAnimation_mobile 4s ease infinite;
+  }
+  .hero {
+    margin: 35.28vh auto 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .spiral_bottom {
+    bottom: 5vh;
+    left: 40%;
+  }
+
+  @keyframes floatAnimation_mobile {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(
+        15px
+      ); /* Adjust this value for the desired floating range */
+    }
+  }
+}
